@@ -5,12 +5,12 @@ import com.github.achaaab.lceb.modele.resolution.manuelle.commande.UtilisationOp
 
 import java.awt.Font;
 
-import static com.github.achaaab.lceb.utilitaire.SwingUtilitaire.scale;
+import static com.github.achaaab.lceb.presentation.ViewScale.scaleAndRound;
 import static java.awt.Color.BLUE;
 import static java.awt.Font.BOLD;
 
 /**
- * présentation d'un plaque contenant un nombre, utilisable pour la résolution manuelle
+ * Présentation d'un plaque contenant un nombre, utilisable pour la résolution manuelle.
  *
  * @author Jonathan Guéhenneux
  * @since 0.0.0
@@ -30,7 +30,7 @@ public class PresentationPlaque extends PresentationCommande {
 		this.plaque = plaque;
 
 		setForeground(BLUE);
-		setFont(new Font("Dialog", BOLD, 16));
+		setFont(new Font("Dialog", BOLD, scaleAndRound(28)));
 		setHorizontalAlignment(CENTER);
 		setVerticalAlignment(CENTER);
 	}

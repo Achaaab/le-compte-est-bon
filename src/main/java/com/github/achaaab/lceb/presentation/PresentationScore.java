@@ -7,7 +7,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
-import static com.github.achaaab.lceb.utilitaire.SwingUtilitaire.scale;
+import static com.github.achaaab.lceb.presentation.ViewScale.scale;
+import static com.github.achaaab.lceb.presentation.ViewScale.scaleAndRound;
 import static java.awt.Font.BOLD;
 
 /**
@@ -32,10 +33,10 @@ public class PresentationScore extends JLabel {
 
 		this.partie = partie;
 
-		setFont(new Font("Dialog", BOLD, 14));
+		setFont(new Font("Dialog", BOLD, scaleAndRound(14)));
 		setHorizontalAlignment(LEFT);
 		setVerticalAlignment(CENTER);
-		setPreferredSize(new Dimension(128, 32));
+		setPreferredSize(scale(new Dimension(128, 32)));
 	}
 
 	/**

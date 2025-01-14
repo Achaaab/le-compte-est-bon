@@ -3,11 +3,10 @@ package com.github.achaaab.lceb.presentation;
 import com.github.achaaab.lceb.modele.LeCompteEstBon;
 import com.github.achaaab.lceb.modele.resolution.Operateur;
 import com.github.achaaab.lceb.modele.resolution.manuelle.commande.UtilisationOperateur;
-import com.github.achaaab.lceb.utilitaire.SwingUtilitaire;
 
 import java.awt.Font;
 
-import static com.github.achaaab.lceb.utilitaire.SwingUtilitaire.scale;
+import static com.github.achaaab.lceb.presentation.ViewScale.scaleAndRound;
 import static java.awt.Color.BLACK;
 import static java.awt.Font.BOLD;
 
@@ -29,7 +28,7 @@ public class PresentationOperateur extends PresentationCommande {
 		super(new UtilisationOperateur(operateur, leCompteEstBon));
 
 		setForeground(BLACK);
-		setFont(new Font("Dialog", BOLD, 18));
+		setFont(new Font("Dialog", BOLD, scaleAndRound(32)));
 		setHorizontalAlignment(CENTER);
 		setVerticalAlignment(CENTER);
 

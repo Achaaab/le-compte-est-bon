@@ -20,7 +20,6 @@ import static com.github.achaaab.lceb.modele.Tirage.NOMBRES_POSSIBLES_UNIQUES;
 import static com.github.achaaab.lceb.modele.Tirage.NOMBRE_PLAQUES;
 import static com.github.achaaab.lceb.utilitaire.FichierUtilitaire.getImage;
 import static com.github.achaaab.lceb.utilitaire.GestionnaireException.traiter;
-import static com.github.achaaab.lceb.utilitaire.SwingUtilitaire.scale;
 import static java.awt.BorderLayout.NORTH;
 import static java.awt.BorderLayout.SOUTH;
 import static java.awt.Font.BOLD;

@@ -8,7 +8,6 @@ import javax.swing.WindowConstants;
 import static com.github.achaaab.lceb.utilitaire.FichierUtilitaire.getImage;
 import static com.github.achaaab.lceb.utilitaire.GestionnaireException.traiter;
 import static com.github.achaaab.lceb.utilitaire.LookAndFeelUtilitaire.setLookAndFeelParNom;
-import static com.github.achaaab.lceb.utilitaire.SwingUtilitaire.scale;
 
 /**
  * @author Jonathan Guéhenneux
@@ -35,7 +34,6 @@ public class Application {
 			fenetre.setIconImage(icone);
 			fenetre.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-			scale(fenetre);
 			fenetre.pack();
 			fenetre.setLocationRelativeTo(null);
 			fenetre.setVisible(true);

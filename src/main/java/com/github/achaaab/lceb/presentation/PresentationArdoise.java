@@ -1,15 +1,15 @@
 package com.github.achaaab.lceb.presentation;
 
 import com.github.achaaab.lceb.modele.resolution.manuelle.Ardoise;
-import com.github.achaaab.lceb.utilitaire.SwingUtilitaire;
 
 import javax.swing.JTextArea;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
+import static com.github.achaaab.lceb.presentation.ViewScale.scale;
+import static com.github.achaaab.lceb.presentation.ViewScale.scaleAndRound;
 import static com.github.achaaab.lceb.utilitaire.StringUtilitaire.SEPARATEUR_LIGNES;
-import static com.github.achaaab.lceb.utilitaire.SwingUtilitaire.scale;
 import static java.awt.Color.WHITE;
 import static java.awt.Font.BOLD;
 import static java.awt.Font.ITALIC;
@@ -33,8 +33,8 @@ public class PresentationArdoise extends JTextArea {
 		setEditable(false);
 		setBackground(new Color(0, 48, 48));
 		setForeground(WHITE);
-		setFont(new Font("Comic Sans Ms", BOLD | ITALIC, 26));
-		setPreferredSize(new Dimension(256, 256));
+		setFont(new Font("Comic Sans Ms", BOLD | ITALIC, scaleAndRound(26)));
+		setPreferredSize(scale(new Dimension(256, 256)));
 	}
 
 	/**

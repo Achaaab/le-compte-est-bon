@@ -10,35 +10,8 @@
 	<version>0.0.0</version>
 
 	<properties>
-		<java.version>16</java.version>
-		<encoding.default>UTF-8</encoding.default>
+		<maven.compiler.release>21</maven.compiler.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
-	<build>
-
-		<plugins>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<release>${java.version}</release>
-					<encoding>${encoding.default}</encoding>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.2.0</version>
-				<configuration>
-					<encoding>${encoding.default}</encoding>
-				</configuration>
-			</plugin>
-
-		</plugins>
-
-	</build>
 
 </project>

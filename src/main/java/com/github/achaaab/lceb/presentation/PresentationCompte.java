@@ -6,7 +6,8 @@ import javax.swing.JLabel;
 import java.awt.Dimension;
 import java.awt.Font;
 
-import static com.github.achaaab.lceb.utilitaire.SwingUtilitaire.scale;
+import static com.github.achaaab.lceb.presentation.ViewScale.scale;
+import static com.github.achaaab.lceb.presentation.ViewScale.scaleAndRound;
 import static java.awt.Color.BLUE;
 import static java.awt.Font.BOLD;
 
@@ -29,10 +30,10 @@ public class PresentationCompte extends JLabel {
 		this.leCompteEstBon = leCompteEstBon;
 
 		setForeground(BLUE);
-		setFont(new Font("Dialog", BOLD, 26));
+		setFont(new Font("Dialog", BOLD, scaleAndRound(48)));
 		setHorizontalAlignment(CENTER);
 		setVerticalAlignment(CENTER);
-		setPreferredSize(new Dimension(128, 64));
+		setPreferredSize(scale(new Dimension(128, 64)));
 	}
 
 	/**

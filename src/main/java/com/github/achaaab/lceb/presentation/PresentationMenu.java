@@ -7,6 +7,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import static com.github.achaaab.lceb.presentation.ViewScale.scaleFont;
 import static java.lang.System.exit;
 import static javax.swing.JOptionPane.showMessageDialog;
 
@@ -17,6 +18,8 @@ import static javax.swing.JOptionPane.showMessageDialog;
  * @since 0.0.0
  */
 public class PresentationMenu extends JMenuBar {
+
+	private static final float FONT_SIZE = 12;
 
 	private final LeCompteEstBon leCompteEstBon;
 
@@ -36,6 +39,16 @@ public class PresentationMenu extends JMenuBar {
 		var tiragePersonnalise = new JMenuItem("Tirage personnalisé");
 		var tirageComplique = new JMenuItem("Tirage compliqué");
 		var quitter = new JMenuItem("Quitter");
+		var aPropos = new JMenuItem("À propos");
+
+		scaleFont(menuFichier, FONT_SIZE);
+		scaleFont(menuSolveur, FONT_SIZE);
+		scaleFont(menuAide, FONT_SIZE);
+		scaleFont(nouvellePartie, FONT_SIZE);
+		scaleFont(tiragePersonnalise, FONT_SIZE);
+		scaleFont(tirageComplique, FONT_SIZE);
+		scaleFont(quitter, FONT_SIZE);
+		scaleFont(aPropos, FONT_SIZE);
 
 		menuFichier.add(nouvellePartie);
 		menuFichier.addSeparator();
@@ -43,6 +56,7 @@ public class PresentationMenu extends JMenuBar {
 		menuFichier.add(tirageComplique);
 		menuFichier.addSeparator();
 		menuFichier.add(quitter);
+		menuAide.add(aPropos);
 
 		var niveaux = new ButtonGroup();
 
@@ -51,6 +65,7 @@ public class PresentationMenu extends JMenuBar {
 		for (var niveau = 1; niveau <= 5; niveau++) {
 
 			presentationNiveau = new PresentationNiveau(leCompteEstBon, niveau);
+			scaleFont(presentationNiveau, FONT_SIZE);
 			niveaux.add(presentationNiveau);
 			menuSolveur.add(presentationNiveau);
 
@@ -58,10 +73,6 @@ public class PresentationMenu extends JMenuBar {
 				presentationNiveau.setSelected(true);
 			}
 		}
-
-		var aPropos = new JMenuItem("À propos");
-
-		menuAide.add(aPropos);
 
 		add(menuFichier);
 		add(menuSolveur);

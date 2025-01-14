@@ -6,15 +6,10 @@ import java.io.IOException;
 import javax.swing.JPanel;
 
 import com.github.achaaab.lceb.modele.LeCompteEstBon;
-import com.github.achaaab.lceb.modele.resolution.Operateur;
-import com.github.achaaab.lceb.modele.resolution.manuelle.Ardoise;
 import com.github.achaaab.lceb.modele.resolution.manuelle.commande.AbandonCalcul;
 import com.github.achaaab.lceb.modele.resolution.manuelle.commande.EffacementArdoise;
 import com.github.achaaab.lceb.modele.resolution.manuelle.commande.EffacementElement;
 import com.github.achaaab.lceb.modele.resolution.manuelle.commande.ValidationCalcul;
-import com.github.achaaab.lceb.utilitaire.ErreurUtilitaire;
-import com.github.achaaab.lceb.utilitaire.FichierUtilitaire;
-import com.github.achaaab.lceb.utilitaire.GestionnaireException;
 
 import static com.github.achaaab.lceb.modele.resolution.Operateur.DIVISE;
 import static com.github.achaaab.lceb.modele.resolution.Operateur.MOINS;
